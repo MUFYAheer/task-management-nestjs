@@ -1,8 +1,16 @@
 {
-  "name": "task-management",
+  "name": "task-management-nestjs",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "NestJS Application",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MUFYAheer/task-management-nestjs"
+  },
+  "author": {
+    "name": "Muhammad Umer Farooq",
+    "email": "mufy.aheer@gmail.com"
+  },
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
