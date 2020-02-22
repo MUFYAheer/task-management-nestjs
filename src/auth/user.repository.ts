@@ -5,7 +5,6 @@ import {
   Logger,
   ConflictException,
   InternalServerErrorException,
-  UnauthorizedException,
 } from '@nestjs/common';
 
 @EntityRepository(User)
@@ -28,12 +27,12 @@ export class UserRepository extends Repository<User> {
     }
   }
 
-  async signIn(authCredentialsDto: AuthCredentialsDto): Promise<string> {
+  async signIn(authCredentialsDto: AuthCredentialsDto): Promise<User> {
     const { username, password } = authCredentialsDto;
     const user = await this.findOne({ username });
     if (!user || !(await user.validatePassword(password))) {
-      throw new UnauthorizedException('Incorrect username and/or password');
+      return null;
     }
-    return username;
+    return user;
   }
 }
