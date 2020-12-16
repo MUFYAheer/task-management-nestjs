@@ -46,7 +46,7 @@
     "typeorm": "^0.2.29"
   },
   "devDependencies": {
-    "@nestjs/cli": "^7.1.4",
+    "@nestjs/cli": "^7.5.4",
     "@nestjs/schematics": "^7.2.5",
     "@nestjs/testing": "^7.6.1",
     "@types/bcrypt": "^3.0.0",
